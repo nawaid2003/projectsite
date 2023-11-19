@@ -1,0 +1,56 @@
+body {
+    background-color: #000;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+#content_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#form_container {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 400px;
+}
+
+#form_header {
+    color: #0f0; /* Green text color */
+    font-family: 'Montserrat', sans-serif;
+}
+
+#form_content_container {
+    margin: 20px 0;
+}
+
+#form_content_inner_container input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+#button_container button {
+    background-color: #0f0;
+    color: #000;
+    cursor: pointer;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+#button_container button:hover {
+    background-color: #0c0; /* Darker green on hover */
+}
+

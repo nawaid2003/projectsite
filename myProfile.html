@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <style>
+        body {
+            background-image: url('img/ab.jpg'); /* Replace with the path to your image */
+            background-size: cover;
+        }
+    </style>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .profile {
+            max-width: 400px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 10px;
+        }
+
+        .profile h1 {
+            color: #0f0; /* Green text color */
+        }
+
+        .profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 20px 0;
+        }
+
+        .info {
+            margin: 20px 0;
+        }
+
+        .green-text {
+            color: #0f0; /* Green text color */
+        }
+    </style>
+</head>
+<body>
+    <div class="profile">
+        <img src="img/profile.jpg" alt="Profile Photo">
+        <h1 class="name-info"></h1> 
+        <div class="user-info">
+            
+            <p><strong>Username:</strong> <span id="username" class="green-text"></span></p>
+            <p><strong>Email:</strong> <span id="email" class="green-text"></span></p>
+            
+            <!-- Add more personal information as needed -->
+        </div>
+    </div>
+</body>
+<script>
+    // Retrieve user data from local storage
+    var userData = JSON.parse(localStorage.getItem('userData'));
+    if (userData) {
+        // Update the profile page with the user data
+     
+        document.getElementById('username').textContent = userData.username;
+        document.getElementById('email').textContent = userData.email;
+        // Update other fields as needed
+    }
+</script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+<script src="loginNsignup.js"></script>
+</html>
